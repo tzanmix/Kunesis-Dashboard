@@ -1,0 +1,10 @@
+/* Import Tailwind's base, components, and utilities */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Fix for Leaflet map tiles not appearing correctly */
+.leaflet-tile-pane {
+  -webkit-filter: none !important;
+  filter: none !important;
+}
