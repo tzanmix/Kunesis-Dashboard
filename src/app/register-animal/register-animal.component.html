@@ -1,0 +1,47 @@
+<div class="p-4 sm:p-6 lg:p-8 max-w-2xl mx-auto">
+  <div class="bg-white dark:bg-gray-800 p-6 sm:p-8 rounded-lg shadow-md mt-6">
+    <h2 class="text-2xl font-semibold text-gray-900 dark:text-white mb-6">Register New Animal / Herd</h2>
+    <form class="space-y-6">
+      
+      <div>
+        <label for="animal-type" class="block text-sm font-medium text-gray-700 dark:text-gray-200">Type</label>
+        <select id="animal-type" class="mt-1 block w-full rounded-md border-gray-300 dark:border-gray-600 dark:bg-gray-700 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm">
+          <option>Single Dog</option>
+          <option>Single Cat</option>
+          <option>Dog Herd (2-5)</option>
+          <option>Dog Herd (5+)</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="animal-location" class="block text-sm font-medium text-gray-700 dark:text-gray-200">Location (Coordinates)</label>
+        <input type="text" id="animal-location" placeholder="38.2466, 21.7345 (or click map - mock)" class="mt-1 block w-full rounded-md border-gray-300 dark:border-gray-600 dark:bg-gray-700 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm">
+        <p class="mt-1 text-xs text-gray-500 dark:text-gray-400">Ideally, this would be auto-filled by clicking on a map.</p>
+      </div>
+
+      <div>
+        <label for="health-status" class="block text-sm font-medium text-gray-700 dark:text-gray-200">Health Status</label>
+        <select id="health-status" class="mt-1 block w-full rounded-md border-gray-300 dark:border-gray-600 dark:bg-gray-700 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm">
+          <option>Appears Healthy</option>
+          <option>Needs Checkup</option>
+          <option>Injured / Urgent</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="animal-notes" class="block text-sm font-medium text-gray-700 dark:text-gray-200">Notes</label>
+        <textarea id="animal-notes" rows="3" placeholder="e.g., Black dog, white paws, very friendly..." class="mt-1 block w-full rounded-md border-gray-300 dark:border-gray-600 dark:bg-gray-700 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm"></textarea>
+      </div>
+
+      <div class="flex justify-end">
+        <button type="button" (click)="navigateBack.emit()" class="mr-3 inline-flex justify-center rounded-md border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 py-2 px-4 text-sm font-medium text-gray-700 dark:text-gray-200 shadow-sm hover:bg-gray-50 dark:hover:bg-gray-600">
+          Cancel
+        </button>
+        <button type="button" class="inline-flex justify-center rounded-md border border-transparent bg-blue-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+          Register Animal
+        </button>
+      </div>
+
+    </form>
+  </div>
+</div>

@@ -1,0 +1,69 @@
+import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+
+@Component({
+  selector: 'app-user-dashboard',
+  standalone: true,
+  imports: [CommonModule],
+  template: `
+    <div class="p-4 sm:p-6 lg:p-8 max-w-4xl mx-auto space-y-6">
+      
+      <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
+        <h2 class="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Report a Dangerous Encounter</h2>
+        <p class="text-sm text-gray-600 dark:text-gray-300 mb-4">
+          Witnessed an incident? Please let us know. Your report helps keep the community and the animals safe.
+        </p>
+        <form class="space-y-4">
+          <div>
+            <label for="incident-location" class="block text-sm font-medium text-gray-700 dark:text-gray-200">Location</label>
+            <input type="text" id="incident-location" placeholder="e.g., Near Riga Fereou 120" class="mt-1 block w-full rounded-md border-gray-300 dark:border-gray-600 dark:bg-gray-700 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm">
+          </div>
+          <div>
+            <label for="incident-description" class="block text-sm font-medium text-gray-700 dark:text-gray-200">Description</label>
+            <textarea id="incident-description" rows="3" placeholder="Describe what happened..." class="mt-1 block w-full rounded-md border-gray-300 dark:border-gray-600 dark:bg-gray-700 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm"></textarea>
+          </div>
+          <button type="button" class="inline-flex justify-center rounded-md border border-transparent bg-red-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2">
+            Submit Report
+          </button>
+        </form>
+      </div>
+
+      <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
+        <h2 class="text-2xl font-semibold text-gray-900 dark:text-white mb-4">My Subscriptions</h2>
+        <p class="text-sm text-gray-600 dark:text-gray-300 mb-4">
+          Track and support the animals you care about.
+        </p>
+        <div class="space-y-4">
+          
+          <div class="border border-gray-200 dark:border-gray-700 p-4 rounded-lg flex flex-col sm:flex-row sm:items-center sm:justify-between">
+            <div>
+              <h3 class="text-lg font-semibold text-blue-600 dark:text-blue-400">Animal ID: D-101</h3>
+              <p class="text-sm text-gray-500 dark:text-gray-400">Last Seen: Psila Alonia Square</p>
+            </div>
+            <div class="flex-shrink-0 mt-4 sm:mt-0 sm:ml-4 flex space-x-2">
+              <button class="px-3 py-1 rounded-md text-sm font-medium text-white bg-blue-600 hover:bg-blue-700">Track</button>
+              <button class="px-3 py-1 rounded-md text-sm font-medium text-white bg-green-600 hover:bg-green-700">Feed</button>
+              <button class="px-3 py-1 rounded-md text-sm font-medium text-white bg-yellow-500 hover:bg-yellow-600">Sponsor</button>
+            </div>
+          </div>
+
+          <div class="border border-gray-200 dark:border-gray-700 p-4 rounded-lg flex flex-col sm:flex-row sm:items-center sm:justify-between">
+            <div>
+              <h3 class="text-lg font-semibold text-blue-600 dark:text-blue-400">Animal ID: D-102</h3>
+              <p class="text-sm text-gray-500 dark:text-gray-400">Last Seen: Port Area</p>
+            </div>
+            <div class="flex-shrink-0 mt-4 sm:mt-0 sm:ml-4 flex space-x-2">
+              <button class="px-3 py-1 rounded-md text-sm font-medium text-white bg-blue-600 hover:bg-blue-700">Track</button>
+              <button class="px-3 py-1 rounded-md text-sm font-medium text-white bg-green-600 hover:bg-green-700">Feed</button>
+              <button class="px-3 py-1 rounded-md text-sm font-medium text-white bg-yellow-500 hover:bg-yellow-600">Sponsor</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  `,
+  changeDetection: ChangeDetectionStrategy.OnPush,
+})
+export class UserDashboardComponent {}
