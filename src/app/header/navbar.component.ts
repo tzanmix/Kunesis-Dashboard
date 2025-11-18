@@ -7,13 +7,13 @@ import {
 import { CommonModule } from '@angular/common';
 
 @Component({
-    selector: 'app-header',
+    selector: 'app-navbar',
     imports: [CommonModule],
     standalone: true,
-    templateUrl: './header.component.html', // <-- Changed
+    templateUrl: './navbar.component.html', // <-- Changed
     changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class HeaderComponent {
+export class NavBarComponent {
   isDarkMode = input.required<boolean>();
   currentPage = input.required<'admin' | 'user' | 'register'>();
   toggleDarkMode = output<void>();

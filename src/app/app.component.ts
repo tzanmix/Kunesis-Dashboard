@@ -6,7 +6,7 @@ import {
 import { CommonModule } from '@angular/common';
 
 // Import all the child components
-import { HeaderComponent } from './header/header.component';
+import { NavBarComponent } from './header/navbar.component';
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
 import { UserDashboardComponent } from './user-dashboard/user-dashboard.component';
 import { RegisterAnimalComponent } from './register-animal/register-animal.component';
@@ -16,7 +16,7 @@ import { RegisterAnimalComponent } from './register-animal/register-animal.compo
     // Add all imported components to the 'imports' array
     imports: [
         CommonModule,
-        HeaderComponent,
+        NavBarComponent,
         AdminDashboardComponent,
         UserDashboardComponent,
         RegisterAnimalComponent
