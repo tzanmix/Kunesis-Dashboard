@@ -15,11 +15,11 @@ import { CommonModule } from '@angular/common';
 declare var L: any;
 
 @Component({
-  selector: 'app-map',
-  standalone: true,
-  imports: [CommonModule],
-  templateUrl: './map.component.html', // <-- Changed
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    selector: 'app-map',
+    imports: [CommonModule],
+    standalone: true,
+    templateUrl: './map.component.html', // <-- Changed
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class MapComponent implements AfterViewInit {
   @ViewChild('map') mapContainer!: ElementRef;

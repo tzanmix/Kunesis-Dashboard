@@ -12,18 +12,18 @@ import { UserDashboardComponent } from './user-dashboard/user-dashboard.componen
 import { RegisterAnimalComponent } from './register-animal/register-animal.component';
 
 @Component({
-  selector: 'app-root',
-  standalone: true,
-  // Add all imported components to the 'imports' array
-  imports: [
-    CommonModule,
-    HeaderComponent,
-    AdminDashboardComponent,
-    UserDashboardComponent,
-    RegisterAnimalComponent
-  ],
-  templateUrl: './app.component.html',
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    selector: 'app-root',
+    // Add all imported components to the 'imports' array
+    imports: [
+        CommonModule,
+        HeaderComponent,
+        AdminDashboardComponent,
+        UserDashboardComponent,
+        RegisterAnimalComponent
+    ],
+    standalone: true,
+    templateUrl: './app.component.html',
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class App {
   // --- STATE MANAGEMENT ---

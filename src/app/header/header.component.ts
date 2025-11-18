@@ -7,11 +7,11 @@ import {
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'app-header',
-  standalone: true,
-  imports: [CommonModule],
-  templateUrl: './header.component.html', // <-- Changed
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    selector: 'app-header',
+    imports: [CommonModule],
+    standalone: true,
+    templateUrl: './header.component.html', // <-- Changed
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HeaderComponent {
   isDarkMode = input.required<boolean>();
