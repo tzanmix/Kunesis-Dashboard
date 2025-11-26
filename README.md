@@ -2,8 +2,7 @@
 
 ## Overview
 
-The Kynesis Municipal Dashboard is a B2G (Business-to-Government) SaaS platform designed for Greek municipalities to manage stray animal populations humanely and efficiently. 
-It provides real-time oversight of smart-collared animals, manages geofencing for public safety, and generates audit-ready reports compliant with Law 4830/2021 and the "ARGOS" funding program.
+The Kynesis Municipal Dashboard is a B2G (Business-to-Government) SaaS platform designed for Greek municipalities to manage stray animal populations humanely and efficiently. It provides real-time oversight of smart-collared animals and manages geofencing for public safety
 
 
 ## Key Features
