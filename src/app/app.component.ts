@@ -10,6 +10,7 @@ import { NavBarComponent } from './header/navbar.component';
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
 import { UserDashboardComponent } from './user-dashboard/user-dashboard.component';
 import { RegisterAnimalComponent } from './register-animal/register-animal.component';
+import { DogComponent } from './dog/dog.component';
 
 @Component({
     selector: 'app-root',
@@ -19,7 +20,8 @@ import { RegisterAnimalComponent } from './register-animal/register-animal.compo
         NavBarComponent,
         AdminDashboardComponent,
         UserDashboardComponent,
-        RegisterAnimalComponent
+        RegisterAnimalComponent,
+        DogComponent
     ],
     standalone: true,
     templateUrl: './app.component.html',
@@ -32,7 +34,7 @@ export class App {
   isDarkMode = signal<boolean>(false);
 
   // Signal for page navigation
-  currentPage = signal<'admin' | 'user' | 'register'>('admin');
+  currentPage = signal<'admin' | 'user' | 'register' | 'dog'>('admin');
 
   // --- METHODS ---
 
@@ -42,7 +44,7 @@ export class App {
   }
 
   /** Updates the current page signal based on header navigation. */
-  onNavigate(page: 'admin' | 'user' | 'register') {
+  onNavigate(page: 'admin' | 'user' | 'register' | 'dog') {
     this.currentPage.set(page);
   }
 }

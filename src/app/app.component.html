@@ -25,6 +25,9 @@
       @case ('register') {
         <app-register-animal (navigateBack)="onNavigate('admin')" />
       }
+      @case ('dog') {
+        <app-dog (navigateBack)="onNavigate('admin')"></app-dog>
+      }
     }
   </main>
 

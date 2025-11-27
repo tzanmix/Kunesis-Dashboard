@@ -30,6 +30,16 @@
           class="inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium border-transparent hover:border-gray-300 dark:hover:border-gray-600 hover:text-gray-700 dark:hover:text-gray-300">
           User Portal
         </button>
+        <button 
+          (click)="navigate.emit('dog')" 
+          [class.border-blue-500]="currentPage() === 'dog'"
+          [class.text-gray-900]="currentPage() === 'dog'"
+          [class.dark:text-white]="currentPage() === 'dog'"
+          [class.text-gray-500]="currentPage() !== 'dog'"
+          [class.dark:text-gray-400]="currentPage() !== 'dog'"
+          class="inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium border-transparent hover:border-gray-300 dark:hover:border-gray-600 hover:text-gray-700 dark:hover:text-gray-300">
+          Dog Portal
+        </button>
         @if (currentPage() === 'admin') {
           <button 
             (click)="navigate.emit('register')"
