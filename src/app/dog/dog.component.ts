@@ -1,5 +1,8 @@
-import { Component, OnInit, OnDestroy, signal, input, computed, effect, ChangeDetectionStrategy, ElementRef, ViewChild } from '@angular/core';
+import { Component, OnInit, OnDestroy, signal, input, computed, effect, ChangeDetectionStrategy, ElementRef, ViewChild, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { catchError, interval, of, startWith, Subscription, switchMap } from 'rxjs';
+import { CollarService, CollarStatusDTO } from '../services/collar.service';
+import { ToastrService } from 'ngx-toastr';
 
 // Interfaces
 interface LogEntry {
@@ -74,6 +77,9 @@ interface DogStatus {
 export class DogComponent implements OnInit, OnDestroy {
   // Input for Dark Mode (Controlled by Parent Layout)
   // isDarkMode = input<boolean>(false); 
+  private collarService = inject(CollarService);
+  private collarId = 'dog-001'; // Hardcoded for now
+  private toastr = inject(ToastrService);
 
   // Signals for state
   status = signal<DogStatus>({
@@ -102,6 +108,9 @@ export class DogComponent implements OnInit, OnDestroy {
   // History for charts
   heartRateHistory = signal<number[]>(new Array(40).fill(70));
   soundBars = signal<number[]>(new Array(32).fill(10));
+
+  private pollSubscription?: Subscription;
+  private animationInterval?: any;
   
   logs = signal<LogEntry[]>([
     { id: 1, time: '12:00:01', type: 'info', message: 'System initialized. Connection stable.' },
@@ -114,13 +123,113 @@ export class DogComponent implements OnInit, OnDestroy {
   private moveInterval: any;
 
   ngOnInit() {
-    this.startSimulation();
+    this.startRealtimeConnection();
+    this.startVisualizers(); // Keep UI alive between polls
+  }
+
+  startVisualizers() {
+    this.animationInterval = setInterval(() => {
+      const s = this.status();
+
+      // Update Heart Graph
+      this.heartRateHistory.update(h => [...h.slice(1), s.heartRate + (Math.random() * 4 - 2)]);
+
+      // Update Sound Bars (Bounce around the actual dB level)
+      const baseLevel = s.decibels; 
+      const newBars = Array.from({ length: 32 }, () => Math.random() * baseLevel);
+      this.soundBars.set(newBars);
+
+    }, 100);
+  }
+
+  startRealtimeConnection() {
+    // Poll every 2 seconds
+    this.pollSubscription = interval(2000)
+      .pipe(
+        startWith(0), // Run immediately
+        switchMap(() => this.collarService.getLatestStatus(this.collarId)),
+        catchError(err => {
+          console.error('Backend unreachable', err);
+          this.toastr.error('Connection lost to backend.');
+          this.addLog('alert', 'Connection lost to backend.');
+          return of(null);
+        })
+      )
+      .subscribe((data) => {
+        if (data) {
+          this.updateStateFromBackend(data);
+        }
+      });
+  }
+
+  updateStateFromBackend(data: CollarStatusDTO) {
+    this.status.update(current => {
+      // Map Battery (3600mV - 4200mV to 0-100%)
+      const batteryPct = this.mapBattery(data.batteryMv);
+
+      // Derive Anxiety/Heart Rate
+      const simulatedHR = (data.respRateBpm || 20) * 3;
+      const calcAnxiety = this.calculateAnxiety(data);
+
+      return {
+        ...current,
+        isConnected: true,
+        battery: batteryPct,
+        temperature: data.dogTempC,
+        decibels: data.lastLeqDb,
+        isBarking: data.barkCount > 0,
+        heartRate: Math.floor(simulatedHR), 
+        anxietyLevel: calcAnxiety
+      };
+    });
+
+    // Update Map Position
+    const cssPos = this.calculatePosition(data.lat, data.lon);
+    this.dogPosition.set(cssPos);
+
+    // Update Logs based on real events
+    if (data.barkCount > 0) {
+      this.addLog('alert', `Barking detected: ${data.barkCount} events`);
+    }
+  }
+
+  // Mappers
+  private mapBattery(mv: number): number {
+    // 3.6V (Empty) to 4.2V (Full)
+    const min = 3600;
+    const max = 4200;
+    let pct = ((mv - min) / (max - min)) * 100;
+    return Math.max(0, Math.min(100, Number(pct.toFixed(1))));
+  }
+
+  private calculatePosition(lat: number, lon: number) {
+    // Define the Bounding Box of your "Park" area
+    // This maps real GPS to your CSS % on screen
+    const minLat = 38.2460, maxLat = 38.2470; 
+    const minLon = 21.7340, maxLon = 21.7350;
+
+    let y = ((maxLat - lat) / (maxLat - minLat)) * 100;
+    let x = ((lon - minLon) / (maxLon - minLon)) * 100;
+
+    // Clamp to 0-100 to stay in the div
+    return { 
+      x: Math.max(5, Math.min(95, x)), 
+      y: Math.max(5, Math.min(95, y)) 
+    };
+  }
+
+  private calculateAnxiety(data: CollarStatusDTO): number {
+    // Simple heuristic logic
+    let score = 10; // Base
+    if (data.lastLeqDb > 80) score += 40; // Loud noise = stress
+    if (data.barkCount > 5) score += 30;  // Barking = stress
+    if (data.respRateBpm && data.respRateBpm > 50) score += 20; // Panting
+    return Math.min(100, score);
   }
 
   ngOnDestroy() {
-    clearInterval(this.dataInterval);
-    clearInterval(this.soundInterval);
-    clearInterval(this.moveInterval);
+    this.pollSubscription?.unsubscribe();
+    clearInterval(this.animationInterval);
   }
 
   startSimulation() {

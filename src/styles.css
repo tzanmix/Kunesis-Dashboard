@@ -1,3 +1,5 @@
+@import 'ngx-toastr/toastr';
+
 /* Import Tailwind's base, components, and utilities */
 @tailwind base;
 @tailwind components;
