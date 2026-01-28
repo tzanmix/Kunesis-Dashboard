@@ -34,7 +34,7 @@ The Kunesis Municipal Dashboard is a B2G (Business-to-Government) SaaS platform 
 Clone the repository:
 ```
 git clone [https://github.com/tzanmix/Kunesis-Dashboard.git](https://github.com/tzanmix/Kunesis-Dashboard.git)
-cd municipality-dashboard
+cd Kunesis-Dashboard
 ```
 
 Install dependencies:
