@@ -19,4 +19,5 @@ export class NavBarComponent {
   isDarkMode = input.required<boolean>();
   toggleDarkMode = output<void>();
   public router = inject(Router);
+  city: string = 'Patras';
 }

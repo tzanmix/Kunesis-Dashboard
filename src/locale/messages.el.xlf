@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en-US" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="adminRegisteredAnimals" datatype="html">
+        <source>Registered Animals</source>
+        <target>Καταχωρημένα Ζώα</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/admin-dashboard/admin-dashboard.component.html</context>
+          <context context-type="linenumber">13,14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="adminActiveHerds" datatype="html">
+        <source>Active Herds</source>
+        <target>Ενεργές Αγέλες</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/admin-dashboard/admin-dashboard.component.html</context>
+          <context context-type="linenumber">25,26</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="adminDangerousIncidents" datatype="html">
+        <source>Dangerous Incidents</source>
+        <target>Επικίνδυνα Περιστατικά</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/admin-dashboard/admin-dashboard.component.html</context>
+          <context context-type="linenumber">38,39</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="adminProtectedZones" datatype="html">
+        <source>Protected Zones</source>
+        <target>Προστατευμένες Ζώνες</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/admin-dashboard/admin-dashboard.component.html</context>
+          <context context-type="linenumber">50,51</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="adminLiveMap" datatype="html">
+        <source> Live Animal &amp; Geofence Map <x id="START_TAG_SPAN_2" ctype="x-span_2" equiv-text="&lt;span class=&quot;flex h-3 w-3 relative&quot;&gt;"/><x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75&quot;&gt;"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/><x id="START_TAG_SPAN_1" ctype="x-span_1" equiv-text="&lt;span class=&quot;relative inline-flex rounded-full h-3 w-3 bg-emerald-500&quot;&gt;"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/></source>
+        <target>Ζωντανός χάρτης Ζώων &amp; Γεωφραγμάτων <x id="START_TAG_SPAN_2" ctype="x-span_2" equiv-text="&lt;span class=&quot;flex h-3 w-3 relative&quot;&gt;"/><x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75&quot;&gt;"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/><x id="START_TAG_SPAN_1" ctype="x-span_1" equiv-text="&lt;span class=&quot;relative inline-flex rounded-full h-3 w-3 bg-emerald-500&quot;&gt;"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/></target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/admin-dashboard/admin-dashboard.component.html</context>
+          <context context-type="linenumber">59,65</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5934633067770339304" datatype="html">
+        <source>Active Monitor</source>
+        <target>Ζωντανή Παρακολούθηση</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/dog/dog.component.html</context>
+          <context context-type="linenumber">12,13</context>
+        </context-group>
+        <note priority="1" from="description">dogActiveMonitor</note>
+      </trans-unit>
+      <trans-unit id="1951680412432144234" datatype="html">
+        <source><x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse&quot;&gt;"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> Live Signal </source>
+        <target><x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse&quot;&gt;"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> Ζωντανό Σήμα </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/dog/dog.component.html</context>
+          <context context-type="linenumber">19,20</context>
+        </context-group>
+        <note priority="1" from="description">dogLiveSignal</note>
+      </trans-unit>
+      <trans-unit id="2686615675222520734" datatype="html">
+        <source>Battery</source>
+        <target>Μπαταρία</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/dog/dog.component.html</context>
+          <context context-type="linenumber">32,33</context>
+        </context-group>
+        <note priority="1" from="description">dogBattery</note>
+      </trans-unit>
+      <trans-unit id="5000588872905914209" datatype="html">
+        <source> HEART RATE <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;w-2 h-2 rounded-full bg-rose-500 animate-pulse&quot;&gt;"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/></source>
+        <target> Καρδιακοί Παλμοί <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;w-2 h-2 rounded-full bg-rose-500 animate-pulse&quot;&gt;"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/></target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/dog/dog.component.html</context>
+          <context context-type="linenumber">56,58</context>
+        </context-group>
+        <note priority="1" from="description">dogHeartRate</note>
+      </trans-unit>
+      <trans-unit id="1726478678806981329" datatype="html">
+        <source>ANXIETY INDEX</source>
+        <target>ΔΕΙΚΤΗΣ ΑΓΧΟΥΣ</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/dog/dog.component.html</context>
+          <context context-type="linenumber">86,87</context>
+        </context-group>
+        <note priority="1" from="description">dogAnxiety</note>
+      </trans-unit>
+      <trans-unit id="187187500641108332" datatype="html">
+        <source><x id="INTERPOLATION" equiv-text="{{getAnxietyLabel()}}"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/dog/dog.component.html</context>
+          <context context-type="linenumber">107,108</context>
+        </context-group>
+        <note priority="1" from="description">dogAnxietyLabel</note>
+      </trans-unit>
+      <trans-unit id="5936468149090233917" datatype="html">
+        <source>Calm</source>
+        <target>Ήρεμο</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/dog/dog.component.html</context>
+          <context context-type="linenumber">114,115</context>
+        </context-group>
+        <note priority="1" from="description">dogAnxietyCalm</note>
+      </trans-unit>
+      <trans-unit id="5726454104363206493" datatype="html">
+        <source>Alert</source>
+        <target>Σε Εγρήγορση</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/dog/dog.component.html</context>
+          <context context-type="linenumber">117,118</context>
+        </context-group>
+        <note priority="1" from="description">dogAnxietyAlert</note>
+      </trans-unit>
+      <trans-unit id="9132487341014276361" datatype="html">
+        <source>Stress</source>
+        <target>Αγχωμένο</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/dog/dog.component.html</context>
+          <context context-type="linenumber">120,121</context>
+        </context-group>
+        <note priority="1" from="description">dogAnxietyStress</note>
+      </trans-unit>
+      <trans-unit id="6690460666518725531" datatype="html">
+        <source> SOUND SENSOR <x id="START_BLOCK_IF" equiv-text="@if(status().isBarking) {"/><x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span
+                           class=&quot;px-1.5 py-0.5 rounded text-[10px] font-bold bg-orange-100 text-orange-600 dark:bg-orange-500/20 dark:text-orange-400 animate-pulse border border-orange-200 dark:border-orange-500/30&quot;&gt;"/>BARKING<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/><x id="CLOSE_BLOCK_IF" equiv-text="}"/></source>
+        <target> ΑΙΣΘΗΤΗΡΑΣ ΗΧΟΥ <x id="START_BLOCK_IF" equiv-text="@if(status().isBarking) {"/><x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span
+                           class=&quot;px-1.5 py-0.5 rounded text-[10px] font-bold bg-orange-100 text-orange-600 dark:bg-orange-500/20 dark:text-orange-400 animate-pulse border border-orange-200 dark:border-orange-500/30&quot;&gt;"/>BARKING<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/><x id="CLOSE_BLOCK_IF" equiv-text="}"/></target>
+
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/dog/dog.component.html</context>
+          <context context-type="linenumber">129,134</context>
+        </context-group>
+        <note priority="1" from="description">dogSoundSensor</note>
+      </trans-unit>
+      <trans-unit id="7598846418510631873" datatype="html">
+        <source> Location</source>
+        <target> Τοποθεσία</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/dog/dog.component.html</context>
+          <context context-type="linenumber">164</context>
+        </context-group>
+        <note priority="1" from="description">dogCurrentLocation</note>
+      </trans-unit>
+      <trans-unit id="8972762114120845542" datatype="html">
+        <source> Tracking Active </source>
+        <target> Παρακολούθηση Ενεργή </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/dog/dog.component.html</context>
+          <context context-type="linenumber">247,248</context>
+        </context-group>
+        <note priority="1" from="description">dogLocationTracking</note>
+      </trans-unit>
+      <trans-unit id="4095901426028818427" datatype="html">
+        <source>TEMPERATURE</source>
+        <target>ΘΕΡΜΟΚΡΑΣΙΑ</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/dog/dog.component.html</context>
+          <context context-type="linenumber">259,260</context>
+        </context-group>
+        <note priority="1" from="description">dogTemperature</note>
+      </trans-unit>
+      <trans-unit id="1840075147588582864" datatype="html">
+        <source>DETERRENT CONTROLS</source>
+        <target>ΕΛΕΓΧΟΙ ΑΠΩΘΗΣΗΣ</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/dog/dog.component.html</context>
+          <context context-type="linenumber">283,285</context>
+        </context-group>
+        <note priority="1" from="description">dogDeterrentControls</note>
+      </trans-unit>
+      <trans-unit id="3891507728337355857" datatype="html">
+        <source>Haptic Vibration</source>
+        <target>Δονήσεις Αφής</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/dog/dog.component.html</context>
+          <context context-type="linenumber">307,308</context>
+        </context-group>
+        <note priority="1" from="description">dogHapticVibration</note>
+      </trans-unit>
+      <trans-unit id="6115374911817691681" datatype="html">
+        <source>Low intensity correction</source>
+        <target>Διόρθωση Χαμηλής Έντασης</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/dog/dog.component.html</context>
+          <context context-type="linenumber">308,309</context>
+        </context-group>
+        <note priority="1" from="description">dogLowIntensityCorrection</note>
+      </trans-unit>
+      <trans-unit id="6051863840243157862" datatype="html">
+        <source>Ultrasonic Pulse</source>
+        <target>Υπερηχητικός Παλμός</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/dog/dog.component.html</context>
+          <context context-type="linenumber">342,343</context>
+        </context-group>
+        <note priority="1" from="description">dogUltrasonicPulse</note>
+      </trans-unit>
+      <trans-unit id="6291205115270220853" datatype="html">
+        <source>High frequency sound</source>
+        <target>Ήχος Υψηλής Συχνότητας</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/dog/dog.component.html</context>
+          <context context-type="linenumber">343,344</context>
+        </context-group>
+        <note priority="1" from="description">dogHighFrequencySound</note>
+      </trans-unit>
+      <trans-unit id="4856045745945815924" datatype="html">
+        <source> SYSTEM LOG <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span
+                        class=&quot;text-[10px] bg-gray-100 dark:bg-gray-700 px-2 py-0.5 rounded border border-gray-200 dark:border-gray-600&quot;&gt;"/>REAL-TIME<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/></source>
+        <target> ΑΡΧΕΙΟ ΚΑΤΑΓΡΑΦΗΣ ΣΥΣΤΗΜΑΤΟΣ <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span
+                        class=&quot;text-[10px] bg-gray-100 dark:bg-gray-700 px-2 py-0.5 rounded border border-gray-200 dark:border-gray-600&quot;&gt;"/>REAL-TIME<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/></target>
+
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/dog/dog.component.html</context>
+          <context context-type="linenumber">364,367</context>
+        </context-group>
+        <note priority="1" from="description">dogSystemLog</note>
+      </trans-unit>
+      <trans-unit id="1066685423668075770" datatype="html">
+        <source><x id="START_BLOCK_IF" equiv-text="@if(controls().feedbackMessage) {"/><x id="START_TAG_DIV_1" ctype="x-div_1" equiv-text="&lt;div
+         class=&quot;bg-gray-900 dark:bg-slate-800 text-white px-4 py-3 rounded-lg shadow-2xl border border-gray-700 dark:border-slate-700 flex items-center gap-3 animate-slide-up&quot;&gt;"/><x id="START_TAG_DIV" ctype="x-div" equiv-text="&lt;div class=&quot;w-2 h-2 rounded-full bg-cyan-400 animate-pulse&quot;&gt;"/><x id="CLOSE_TAG_DIV" ctype="x-div" equiv-text="&lt;/div&gt;"/> <x id="INTERPOLATION" equiv-text="{{controls().feedbackMessage}}"/> <x id="CLOSE_TAG_DIV" ctype="x-div" equiv-text="&lt;/div&gt;"/><x id="CLOSE_BLOCK_IF" equiv-text="}"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/dog/dog.component.html</context>
+          <context context-type="linenumber">394,404</context>
+        </context-group>
+        <note priority="1" from="description">dogConnectionStatus</note>
+      </trans-unit>
+      <trans-unit id="appTitle" datatype="html">
+        <source>Kunesis <x id="INTERPOLATION" equiv-text="{{city}}"/></source>
+        <target>Κύνησις <x id="INTERPOLATION" equiv-text="{{city}}"/></target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/header/navbar.component.html</context>
+          <context context-type="linenumber">8,9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="navAdmin" datatype="html">
+        <source> Admin Dashboard </source>
+        <target> Πίνακας Διαχείρισης </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/header/navbar.component.html</context>
+          <context context-type="linenumber">19,20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="navUser" datatype="html">
+        <source> User Portal </source>
+        <target>Πύλη Χρήστη</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/header/navbar.component.html</context>
+          <context context-type="linenumber">26,27</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="navDog" datatype="html">
+        <source> Dog Portal </source>
+        <target>Πύλη Σκύλου</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/header/navbar.component.html</context>
+          <context context-type="linenumber">33,34</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="navRegisterAnimal" datatype="html">
+        <source> Register Animal </source>
+        <target>Καταχώρηση Ζώου</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/header/navbar.component.html</context>
+          <context context-type="linenumber">40,42</context>
+        </context-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

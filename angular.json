@@ -5,6 +5,12 @@
   "projects": {
     "stray-watch-angular": {
       "projectType": "application",
+      "i18n": {
+        "sourceLocale": "en-US",
+        "locales": {
+          "el": "src/locale/messages.el.xlf"
+        }
+      },
       "schematics": {},
       "root": "",
       "sourceRoot": "src",
@@ -17,7 +23,8 @@
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
-              "zone.js"
+              "zone.js",
+              "@angular/localize/init"
             ],
             "tsConfig": "tsconfig.app.json",
             "assets": [
@@ -34,6 +41,14 @@
             ]
           },
           "configurations": {
+            "el": {
+              "localize": ["el"],
+              "baseHref": "/el/"
+            },
+            "en": {
+              "localize": ["en"],
+              "baseHref": "/en/"
+            },
             "production": {
               "budgets": [
                 {
@@ -63,6 +78,12 @@
             "buildTarget": "stray-watch-angular:build:development"
           },
           "configurations": {
+            "el": {
+              "buildTarget": "stray-watch-angular:build:el"
+            },
+            "en": {
+              "buildTarget": "stray-watch-angular:build:en"
+            },
             "production": {
               "buildTarget": "stray-watch-angular:build:production"
             },

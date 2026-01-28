@@ -9,12 +9,12 @@
          <!-- Sub-header for Smart Collar Context -->
          <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8">
             <div>
-               <h2 class="text-2xl font-bold text-gray-900 dark:text-white">Active Monitor</h2>
+               <h2 class="text-2xl font-bold text-gray-900 dark:text-white" i18n="dogActiveMonitor">Active Monitor</h2>
                <div class="flex items-center gap-2 mt-1">
                   <span
                      class="inline-flex items-center rounded-md bg-blue-50 dark:bg-blue-900/30 px-2 py-1 text-xs font-medium text-blue-700 dark:text-blue-300 ring-1 ring-inset ring-blue-700/10">Unit:
                      K9-XJ9</span>
-                  <span
+                  <span i18n="dogLiveSignal"
                      class="inline-flex items-center gap-1.5 rounded-md bg-emerald-50 dark:bg-emerald-900/30 px-2 py-1 text-xs font-medium text-emerald-700 dark:text-emerald-300 ring-1 ring-inset ring-emerald-600/20">
                      <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
                      Live Signal
@@ -29,7 +29,7 @@
                   class="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 px-4 py-2 flex items-center gap-3">
                   <div class="flex flex-col items-end">
                      <span
-                        class="text-[10px] uppercase text-gray-500 dark:text-gray-400 font-bold tracking-wider">Battery</span>
+                        class="text-[10px] uppercase text-gray-500 dark:text-gray-400 font-bold tracking-wider" i18n="dogBattery">Battery</span>
                      <span class="text-sm font-bold" [class.text-red-500]="status().battery < 20">{{status().battery |
                         number:'1.2-2'}}%</span>
                   </div>
@@ -52,7 +52,7 @@
                <div
                   class="bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700 p-5 relative overflow-hidden group transition-colors duration-300">
                   <div class="flex justify-between items-start mb-4 relative z-10">
-                     <h3 class="text-gray-500 dark:text-gray-400 text-sm font-medium flex items-center gap-2">
+                     <h3 class="text-gray-500 dark:text-gray-400 text-sm font-medium flex items-center gap-2" i18n="dogHeartRate">
                         HEART RATE
                         <span class="w-2 h-2 rounded-full bg-rose-500 animate-pulse"></span>
                      </h3>
@@ -83,7 +83,7 @@
                <div
                   class="bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700 p-5 relative overflow-hidden transition-colors duration-300">
                   <div class="flex justify-between items-start mb-6">
-                     <h3 class="text-gray-500 dark:text-gray-400 text-sm font-medium">ANXIETY INDEX</h3>
+                     <h3 class="text-gray-500 dark:text-gray-400 text-sm font-medium" i18n="dogAnxiety">ANXIETY INDEX</h3>
                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                         class="text-violet-500">
@@ -104,20 +104,20 @@
                      <div class="absolute inset-0 flex flex-col items-center justify-center">
                         <span class="text-3xl font-bold text-gray-900 dark:text-white">{{status().anxietyLevel}}</span>
                         <span
-                           class="text-xs text-gray-500 dark:text-gray-400 uppercase tracking-wider font-bold">{{getAnxietyLabel()}}</span>
+                           class="text-xs text-gray-500 dark:text-gray-400 uppercase tracking-wider font-bold" i18n="dogAnxietyLabel">{{getAnxietyLabel()}}</span>
                      </div>
                   </div>
 
                   <div class="mt-4 grid grid-cols-3 gap-2 text-center text-xs text-gray-600 dark:text-gray-400">
                      <div class="py-1 rounded bg-gray-50 dark:bg-gray-700/50 transition-colors"
                         [class.bg-emerald-50]="status().anxietyLevel < 30"
-                        [class.text-emerald-600]="status().anxietyLevel < 30">Calm</div>
+                        [class.text-emerald-600]="status().anxietyLevel < 30" i18n="dogAnxietyCalm">Calm</div>
                      <div class="py-1 rounded bg-gray-50 dark:bg-gray-700/50 transition-colors"
                         [class.bg-amber-50]="status().anxietyLevel >= 30 && status().anxietyLevel < 70"
-                        [class.text-amber-600]="status().anxietyLevel >= 30 && status().anxietyLevel < 70">Alert</div>
+                        [class.text-amber-600]="status().anxietyLevel >= 30 && status().anxietyLevel < 70" i18n="dogAnxietyAlert">Alert</div>
                      <div class="py-1 rounded bg-gray-50 dark:bg-gray-700/50 transition-colors"
                         [class.bg-red-50]="status().anxietyLevel >= 70"
-                        [class.text-red-600]="status().anxietyLevel >= 70">Stress</div>
+                        [class.text-red-600]="status().anxietyLevel >= 70" i18n="dogAnxietyStress">Stress</div>
                   </div>
                </div>
 
@@ -125,7 +125,7 @@
                <div
                   class="bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700 p-5 flex-1 min-h-[160px] flex flex-col transition-colors duration-300">
                   <div class="flex justify-between items-center mb-4">
-                     <h3 class="text-gray-500 dark:text-gray-400 text-sm font-medium flex items-center gap-2">
+                     <h3 class="text-gray-500 dark:text-gray-400 text-sm font-medium flex items-center gap-2" i18n="dogSoundSensor">
                         SOUND SENSOR
                         @if(status().isBarking) {
                         <span
@@ -160,7 +160,7 @@
                      <div
                         class="bg-white/90 dark:bg-slate-900/90 backdrop-blur border border-gray-200 dark:border-slate-700 p-2 rounded-lg shadow-lg">
                         <div
-                           class="text-[10px] text-gray-500 dark:text-slate-400 uppercase tracking-wider font-bold mb-1">
+                           class="text-[10px] text-gray-500 dark:text-slate-400 uppercase tracking-wider font-bold mb-1" i18n="dogCurrentLocation">
                            Location</div>
                         <div class="text-sm font-mono text-cyan-600 dark:text-cyan-400">38.2466° N, 21.7346° E</div>
                      </div>
@@ -242,7 +242,8 @@
 
                         <!-- Tooltip -->
                         <div
-                           class="absolute top-6 left-1/2 -translate-x-1/2 bg-white dark:bg-slate-900/90 text-gray-700 dark:text-slate-200 text-[10px] px-2 py-1 rounded shadow-sm border border-gray-200 dark:border-slate-700 whitespace-nowrap z-20 pointer-events-none">
+                           class="absolute top-6 left-1/2 -translate-x-1/2 bg-white dark:bg-slate-900/90 text-gray-700 dark:text-slate-200 text-[10px] px-2 py-1 rounded shadow-sm border border-gray-200 dark:border-slate-700 whitespace-nowrap z-20 pointer-events-none"
+                           i18n="dogLocationTracking">
                            Tracking Active
                         </div>
                      </div>
@@ -255,7 +256,7 @@
             <div class="col-span-12 lg:col-span-3 flex flex-col gap-6">
 
                <div class="bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-200 dark:border-gray-gray-700 p-5 transition-colors duration-300">
-                  <h3 class="text-gray-500 dark:text-gray-400 text-sm font-medium mb-4">TEMPERATURE</h3>
+                  <h3 class="text-gray-500 dark:text-gray-400 text-sm font-medium mb-4" i18n="dogTemperature">TEMPERATURE</h3>
                   <div class="space-y-4 gap-2 flex items-baseline">
                      <span
                         class="text-5xl font-bold text-gray-900 dark:text-white tracking-tighter">{{status().temperature}}</span>
@@ -279,7 +280,7 @@
                         <path d="m16 6-4 4-4-4" />
                         <path d="M16 18a4 4 0 0 0-8 0" />
                      </svg>
-                     <h3 class="text-gray-500 dark:text-gray-400 text-sm font-medium">DETERRENT CONTROLS</h3>
+                     <h3 class="text-gray-500 dark:text-gray-400 text-sm font-medium" i18n="dogDeterrentControls">DETERRENT CONTROLS</h3>
                   </div>
 
                   <div class="space-y-4">
@@ -303,8 +304,8 @@
                                  </svg>
                               </div>
                               <div class="text-left">
-                                 <div class="font-bold">Haptic Vibration</div>
-                                 <div class="text-xs text-gray-500 dark:text-gray-400">Low intensity correction</div>
+                                 <div class="font-bold" i18n="dogHapticVibration">Haptic Vibration</div>
+                                 <div class="text-xs text-gray-500 dark:text-gray-400" i18n="dogLowIntensityCorrection">Low intensity correction</div>
                               </div>
                            </div>
 
@@ -338,8 +339,8 @@
                                  </svg>
                               </div>
                               <div class="text-left">
-                                 <div class="font-bold">Ultrasonic Pulse</div>
-                                 <div class="text-xs text-gray-500 dark:text-gray-400">High frequency sound</div>
+                                 <div class="font-bold" i18n="dogUltrasonicPulse">Ultrasonic Pulse</div>
+                                 <div class="text-xs text-gray-500 dark:text-gray-400" i18n="dogHighFrequencySound">High frequency sound</div>
                               </div>
                            </div>
 
@@ -359,7 +360,7 @@
                <div
                   class="bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700 p-5 h-[300px] flex flex-col overflow-hidden transition-colors duration-300">
                   <h3
-                     class="text-gray-500 dark:text-gray-400 text-sm font-medium mb-4 flex items-center justify-between">
+                     class="text-gray-500 dark:text-gray-400 text-sm font-medium mb-4 flex items-center justify-between" i18n="dogSystemLog">
                      SYSTEM LOG
                      <span
                         class="text-[10px] bg-gray-100 dark:bg-gray-700 px-2 py-0.5 rounded border border-gray-200 dark:border-gray-600">REAL-TIME</span>
@@ -389,7 +390,7 @@
    </div>
 
    <!-- Connection Status Toast -->
-   <div class="absolute bottom-6 left-6 z-50">
+   <div class="absolute bottom-6 left-6 z-50" i18n="dogConnectionStatus">
       @if(controls().feedbackMessage) {
       <div
          class="bg-gray-900 dark:bg-slate-800 text-white px-4 py-3 rounded-lg shadow-2xl border border-gray-700 dark:border-slate-700 flex items-center gap-3 animate-slide-up">

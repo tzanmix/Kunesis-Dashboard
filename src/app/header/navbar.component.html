@@ -5,7 +5,7 @@
       <div class="flex-shrink-0 flex items-center">
         <a routerLink="/admin" class="flex items-center">
           <img src="assets/kunesis-logo-new.png" alt="kunesis logo" style="width: 48px; height: 48px;">
-          <span class="ml-2 text-xl font-bold text-gray-900 dark:text-white">Κύνησις Patras</span>
+          <span class="ml-2 text-xl font-bold text-gray-900 dark:text-white" i18n="@@appTitle">Kunesis {{city}}</span>
         </a>
       </div>
 
@@ -14,31 +14,41 @@
         <a routerLink="/admin"
            routerLinkActive="border-blue-500 text-gray-900 dark:text-white"
            [routerLinkActiveOptions]="{exact: true}"
-           class="inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium border-transparent text-gray-500 dark:text-gray-400 hover:border-gray-300 dark:hover:border-gray-600 hover:text-gray-700 dark:hover:text-gray-300 cursor-pointer transition-colors">
+           class="inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium border-transparent text-gray-500 dark:text-gray-400 hover:border-gray-300 dark:hover:border-gray-600 hover:text-gray-700 dark:hover:text-gray-300 cursor-pointer transition-colors"
+           i18n="@@navAdmin">
           Admin Dashboard
         </a>
 
         <a routerLink="/user"
            routerLinkActive="border-blue-500 text-gray-900 dark:text-white"
-           class="inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium border-transparent text-gray-500 dark:text-gray-400 hover:border-gray-300 dark:hover:border-gray-600 hover:text-gray-700 dark:hover:text-gray-300 cursor-pointer transition-colors">
+           class="inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium border-transparent text-gray-500 dark:text-gray-400 hover:border-gray-300 dark:hover:border-gray-600 hover:text-gray-700 dark:hover:text-gray-300 cursor-pointer transition-colors"
+           i18n="@@navUser">
           User Portal
         </a>
 
         <a routerLink="/dog"
            routerLinkActive="border-blue-500 text-gray-900 dark:text-white"
-           class="inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium border-transparent text-gray-500 dark:text-gray-400 hover:border-gray-300 dark:hover:border-gray-600 hover:text-gray-700 dark:hover:text-gray-300 cursor-pointer transition-colors">
+           class="inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium border-transparent text-gray-500 dark:text-gray-400 hover:border-gray-300 dark:hover:border-gray-600 hover:text-gray-700 dark:hover:text-gray-300 cursor-pointer transition-colors"
+           i18n="@@navDog">
           Dog Portal
         </a>
 
         @if (router.url.includes('/admin')) {
           <a routerLink="/register"
-             class="ml-4 inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-green-600 hover:bg-green-700 transition-colors">
+             class="ml-4 inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-green-600 hover:bg-green-700 transition-colors"
+             i18n="@@navRegisterAnimal">
             Register Animal
           </a>
         }
       </div>
 
-      <div class="flex items-center">
+      <div class="flex items-center space-x-4">
+        <div class="flex items-center space-x-2 text-sm font-medium">
+          <a href="/en/" class="text-gray-500 hover:text-blue-600 dark:text-gray-400">EN</a>
+          <span class="text-gray-300">|</span>
+          <a href="/el/" class="text-gray-500 hover:text-blue-600 dark:text-gray-400">EL</a>
+        </div>
+        
         <button (click)="toggleDarkMode.emit()" type="button" class="p-2 rounded-full text-gray-400 hover:text-gray-500 hover:bg-gray-200 dark:text-gray-500 dark:hover:text-gray-400 dark:hover:bg-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
           <span class="sr-only">Toggle dark mode</span>
           @if (!isDarkMode()) {
