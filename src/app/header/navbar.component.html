@@ -1,51 +1,40 @@
 <nav class="bg-white dark:bg-gray-800 shadow-md w-full z-10">
   <div class="container mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex justify-between items-center h-16">
+      
       <div class="flex-shrink-0 flex items-center">
-        <!-- FIX DARK MODE -->
-        <button (click)="navigate.emit('admin')">
+        <a routerLink="/admin" class="flex items-center">
           <img src="assets/kunesis-logo-new.png" alt="kunesis logo" style="width: 48px; height: 48px;">
-        </button>
-        <span class="ml-2 text-xl font-bold text-gray-900 dark:text-white">Κύνησις Patras</span>
+          <span class="ml-2 text-xl font-bold text-gray-900 dark:text-white">Κύνησις Patras</span>
+        </a>
       </div>
 
       <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
-        <button 
-          (click)="navigate.emit('admin')" 
-          [class.border-blue-500]="currentPage() === 'admin'"
-          [class.text-gray-900]="currentPage() === 'admin'"
-          [class.dark:text-white]="currentPage() === 'admin'"
-          [class.text-gray-500]="currentPage() !== 'admin'"
-          [class.dark:text-gray-400]="currentPage() !== 'admin'"
-          class="inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium border-transparent hover:border-gray-300 dark:hover:border-gray-600 hover:text-gray-700 dark:hover:text-gray-300">
+        
+        <a routerLink="/admin"
+           routerLinkActive="border-blue-500 text-gray-900 dark:text-white"
+           [routerLinkActiveOptions]="{exact: true}"
+           class="inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium border-transparent text-gray-500 dark:text-gray-400 hover:border-gray-300 dark:hover:border-gray-600 hover:text-gray-700 dark:hover:text-gray-300 cursor-pointer transition-colors">
           Admin Dashboard
-        </button>
-        <button 
-          (click)="navigate.emit('user')" 
-          [class.border-blue-500]="currentPage() === 'user'"
-          [class.text-gray-900]="currentPage() === 'user'"
-          [class.dark:text-white]="currentPage() === 'user'"
-          [class.text-gray-500]="currentPage() !== 'user'"
-          [class.dark:text-gray-400]="currentPage() !== 'user'"
-          class="inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium border-transparent hover:border-gray-300 dark:hover:border-gray-600 hover:text-gray-700 dark:hover:text-gray-300">
+        </a>
+
+        <a routerLink="/user"
+           routerLinkActive="border-blue-500 text-gray-900 dark:text-white"
+           class="inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium border-transparent text-gray-500 dark:text-gray-400 hover:border-gray-300 dark:hover:border-gray-600 hover:text-gray-700 dark:hover:text-gray-300 cursor-pointer transition-colors">
           User Portal
-        </button>
-        <button 
-          (click)="navigate.emit('dog')" 
-          [class.border-blue-500]="currentPage() === 'dog'"
-          [class.text-gray-900]="currentPage() === 'dog'"
-          [class.dark:text-white]="currentPage() === 'dog'"
-          [class.text-gray-500]="currentPage() !== 'dog'"
-          [class.dark:text-gray-400]="currentPage() !== 'dog'"
-          class="inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium border-transparent hover:border-gray-300 dark:hover:border-gray-600 hover:text-gray-700 dark:hover:text-gray-300">
+        </a>
+
+        <a routerLink="/dog"
+           routerLinkActive="border-blue-500 text-gray-900 dark:text-white"
+           class="inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium border-transparent text-gray-500 dark:text-gray-400 hover:border-gray-300 dark:hover:border-gray-600 hover:text-gray-700 dark:hover:text-gray-300 cursor-pointer transition-colors">
           Dog Portal
-        </button>
-        @if (currentPage() === 'admin') {
-          <button 
-            (click)="navigate.emit('register')"
-            class="ml-4 inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500">
+        </a>
+
+        @if (router.url.includes('/admin')) {
+          <a routerLink="/register"
+             class="ml-4 inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-green-600 hover:bg-green-700 transition-colors">
             Register Animal
-          </button>
+          </a>
         }
       </div>
 

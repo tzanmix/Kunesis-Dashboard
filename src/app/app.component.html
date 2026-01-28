@@ -9,10 +9,10 @@
   
   <app-navbar 
     [isDarkMode]="isDarkMode()" 
-    [currentPage]="currentPage()"
     (toggleDarkMode)="toggleDarkMode()"
-    (navigate)="onNavigate($event)"
   />
+
+  <router-outlet></router-outlet>
 
   <main>
     @switch (currentPage()) {

@@ -11,18 +11,20 @@ import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.compo
 import { UserDashboardComponent } from './user-dashboard/user-dashboard.component';
 import { RegisterAnimalComponent } from './register-animal/register-animal.component';
 import { DogComponent } from './dog/dog.component';
+import { RouterOutlet } from "@angular/router";
 
 @Component({
     selector: 'app-root',
     // Add all imported components to the 'imports' array
     imports: [
-        CommonModule,
-        NavBarComponent,
-        AdminDashboardComponent,
-        UserDashboardComponent,
-        RegisterAnimalComponent,
-        DogComponent
-    ],
+    CommonModule,
+    NavBarComponent,
+    AdminDashboardComponent,
+    UserDashboardComponent,
+    RegisterAnimalComponent,
+    DogComponent,
+    RouterOutlet
+],
     standalone: true,
     templateUrl: './app.component.html',
     changeDetection: ChangeDetectionStrategy.OnPush

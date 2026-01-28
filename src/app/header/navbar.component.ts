@@ -1,21 +1,22 @@
 import { 
   ChangeDetectionStrategy, 
   Component, 
+  inject, 
   input, 
   output 
 } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Router, RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
     selector: 'app-navbar',
-    imports: [CommonModule],
+    imports: [CommonModule, RouterLink, RouterLinkActive],
     standalone: true,
-    templateUrl: './navbar.component.html', // <-- Changed
+    templateUrl: './navbar.component.html',
     changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class NavBarComponent {
   isDarkMode = input.required<boolean>();
-  currentPage = input.required<'admin' | 'user' | 'register' | 'dog'>();
   toggleDarkMode = output<void>();
-  navigate = output<'admin' | 'user' | 'register' | 'dog'>();
+  public router = inject(Router);
 }
